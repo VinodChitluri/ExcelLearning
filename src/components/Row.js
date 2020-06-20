@@ -14,6 +14,7 @@ const Row = (props) => {
         onChangedValue={props.handleChangedCell}
         updateCells={props.updateCells}
         value={props.rowData[x] || ''}
+        executeFormula={props.executeFormula}
       />,
     )
   }
@@ -29,6 +30,7 @@ Row.propTypes = {
   updateCells: PropTypes.func.isRequired,
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
+  executeFormula: PropTypes.func.isRequired,
   rowData: PropTypes.shape({
     string: PropTypes.string,
   }).isRequired,
